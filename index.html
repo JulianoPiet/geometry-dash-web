@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10152b">
+  <title>Geometry Dash Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <span class="logo">GD<span>WEB</span></span>
+      <span class="tag">PROJETO EXPERIMENTAL</span>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">PC EDITION • BROWSER PROJECT</p>
+      <h1>GEOMETRY<br><span>DASH WEB</span></h1>
+      <p class="intro">Um projeto experimental para investigar a execução local de uma versão compatível com navegador.</p>
+
+      <div class="panel">
+        <div class="status-line">
+          <span id="status" role="status">Aguardando inicialização</span>
+          <span id="percent">0%</span>
+        </div>
+        <div class="progress" aria-label="Progresso de preparação">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+        <p id="detail" class="detail">Nenhum arquivo do jogo foi enviado ou carregado.</p>
+        <button id="prepareButton" type="button">INICIAR PREPARAÇÃO</button>
+      </div>
+
+      <div class="game-placeholder" aria-live="polite">
+        <div class="cube" aria-hidden="true"></div>
+        <strong id="gameTitle">A área do jogo ficará aqui</strong>
+        <span id="gameMessage">A engine WebAssembly ainda não foi portada.</span>
+      </div>
+    </section>
+
+    <footer>
+      <span>Feito como projeto experimental independente.</span>
+      <span>Esta página ainda não contém o jogo executável.</span>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
