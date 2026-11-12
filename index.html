@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -17,24 +18,46 @@
     <section class="hero">
       <p class="eyebrow">PC EDITION • BROWSER PROJECT</p>
       <h1>GEOMETRY<br><span>DASH WEB</span></h1>
-      <p class="intro">Um projeto experimental para investigar a execução local de uma versão compatível com navegador.</p>
+      <p class="intro">
+        Um projeto experimental para investigar a execução local
+        de uma versão compatível com navegador.
+      </p>
 
       <div class="panel">
         <div class="status-line">
-          <span id="status" role="status">Aguardando inicialização</span>
+          <span id="status" role="status">
+            Aguardando inicialização
+          </span>
           <span id="percent">0%</span>
         </div>
+
         <div class="progress" aria-label="Progresso de preparação">
           <div id="progressFill" class="progress-fill"></div>
         </div>
-        <p id="detail" class="detail">Nenhum arquivo do jogo foi enviado ou carregado.</p>
-        <button id="prepareButton" type="button">INICIAR PREPARAÇÃO</button>
+
+        <p id="detail" class="detail">
+          Nenhum arquivo do jogo foi enviado ou carregado.
+        </p>
+
+        <button id="prepareButton" type="button">
+          INICIAR PREPARAÇÃO
+        </button>
       </div>
 
       <div class="game-placeholder" aria-live="polite">
-        <div class="cube" aria-hidden="true"></div>
-        <strong id="gameTitle">A área do jogo ficará aqui</strong>
-        <span id="gameMessage">A engine WebAssembly ainda não foi portada.</span>
+        <canvas
+          id="gameCanvas"
+          style="width:100%;height:220px;display:block;"
+          aria-label="Área de renderização WebGL">
+        </canvas>
+
+        <strong id="gameTitle">
+          Motor gráfico experimental
+        </strong>
+
+        <span id="gameMessage">
+          Preparando renderização WebGL...
+        </span>
       </div>
     </section>
 
@@ -43,6 +66,7 @@
       <span>Esta página ainda não contém o jogo executável.</span>
     </footer>
   </main>
+
   <script src="app.js"></script>
 </body>
 </html>
